@@ -16,6 +16,7 @@ input{
     float: right;
     flex-grow: 1;
 }
+
 button{
     color: black;
     background-color: #00FFFF;
