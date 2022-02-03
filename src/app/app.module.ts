@@ -1,18 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { SearchBarComponent } from './search/search-bar.component';
+import { HotelsEventComponent } from './events/hotels-event.component';
+import { EventThumbnailComponent } from './events/holtel-thumbnail.component';
+import { EventService } from './events/shared/event.service';
+import { HotelDetailsComponent } from './events/event-details/hotel-details.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './routes';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SearchBarComponent,
+    HotelsEventComponent,
+    EventThumbnailComponent,
+    HotelDetailsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+
+    RouterModule.forRoot(appRoutes)
+    
   ],
-  providers: [],
+  providers: [
+    EventService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
