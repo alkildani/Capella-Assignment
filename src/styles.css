@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+    min-height: 100%;
+}
+
 body{
-    background: linear-gradient(#000080 150px, white 15%);
+    background: linear-gradient(#000080 150px, #181818 150px );
     height: 100vh;
     /* background-color: white; */
     color: black;
@@ -15,19 +19,27 @@ input{
     display: block;
     float: right;
     flex-grow: 1;
+    
 }
 
 button{
     color: black;
     background-color: #00FFFF;
+    width: 80px;
     height: 40px;
-    
-
 }
 
-form{
+button:hover{
+    background-color: #00dddd;
+}
+
+button:active{
+    background-color: #00aaaa;
+}
+
+.form{
     margin: auto;   
-    margin-top: 130px;
+    margin-top: 65px;
     margin-bottom: 50px;
     display: flex;
     height: 40px;
