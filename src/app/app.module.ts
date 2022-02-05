@@ -10,6 +10,7 @@ import { EventService } from './events/shared/event.service';
 import { HotelDetailsComponent } from './events/event-details/hotel-details.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,12 +20,13 @@ import { appRoutes } from './routes';
     HotelsEventComponent,
     EventThumbnailComponent,
     HotelDetailsComponent,
+
   ],
   imports: [
     BrowserModule,
-
+    FormsModule,
     RouterModule.forRoot(appRoutes)
-    
+
   ],
   providers: [
     EventService,

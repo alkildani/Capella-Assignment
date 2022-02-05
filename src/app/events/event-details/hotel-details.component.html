@@ -1,4 +1,52 @@
-<div>
-    <h1>{{location.id}}</h1>
+<div class="row">
+    <div class="col-md-9" style="float:none;margin:auto;">
+        <h1 style="color: white;">{{location.location}}: {{location.hotels.length}} Hotels Found</h1>
+        <div *ngFor="let hotel of location.hotels">
+            <div class="card">
+                <h4 class="hotelName" [ngSwitch]="hotel.numOfStars">
+                    <b> {{hotel?.name}} </b>
+                    <span *ngSwitchCase="'5'">
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                    </span>
+                    <span *ngSwitchCase="'4'">
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                    </span>
+                    <span *ngSwitchCase="'3'">
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                        <span class="glyphicon glyphicon-star" style="color: yellow;"></span>
+                    </span>
+                </h4>
+                <img src="/assets/images/helton-dead-sea.jpg" alt="" />
+                <h4 class="discription"><b>Discription: </b><br><br>{{hotel?.description}}</h4>
+
+                <div class="info">
+
+                    <div id="rate" [ngSwitch]="true">
+                        <h4 class="data" style="color: white;" title="Rate">{{hotel?.rate}}</h4>
+                        <span class="rateSpan" *ngSwitchCase="hotel.rate >= 0 && hotel.rate <= 6.0 ">Bad</span>
+                        <span class="rateSpan" *ngSwitchCase="hotel.rate >= 6.1 && hotel.rate <= 7.0 ">Good</span>
+                        <span class="rateSpan" *ngSwitchCase="hotel.rate >= 7.1 && hotel.rate <= 8.0 ">Very-Good</span>
+                        <span class="rateSpan" *ngSwitchCase="hotel.rate >= 8.1 && hotel.rate <= 9.0 ">Exelent</span>
+                        <span class="rateSpan" *ngSwitchCase="hotel.rate >= 9.1 && hotel.rate <= 10.0 ">Amasing</span>
+                        <span class="rateSpan" *ngSwitchDefault>Not rated</span>
+
+                    </div>
+                    <p class="data">1 night, 2 adults</p>
+                    <h4 class="data" style="color: red;">{{hotel?.price}} JOD</h4>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 
 </div>
+<button (click)="topFunction()" id="myBtn" title="Go to top">Top</button>

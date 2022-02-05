@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template:`
+  template: `
   
-    <search-bar></search-bar>
+    
     <router-outlet></router-outlet>
 
   `
-  
+
 })
 export class AppComponent {
   title = 'hotels-app';
