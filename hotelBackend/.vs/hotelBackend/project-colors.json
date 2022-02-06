@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "103c9da9-45aa-4f73-ba35-9403fa9382ed": {
+      "ProjectGuid": "103c9da9-45aa-4f73-ba35-9403fa9382ed",
+      "DisplayName": "hotelBackend",
+      "ColorIndex": 0
+    },
+    "7d0eb796-d390-4acd-a113-f45fbd555cfb": {
+      "ProjectGuid": "7d0eb796-d390-4acd-a113-f45fbd555cfb",
+      "DisplayName": "HotelsDataAccess",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
