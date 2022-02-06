@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Output } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+
 
 import { EventService } from "../events/shared/event.service";
 
@@ -10,7 +12,7 @@ import { EventService } from "../events/shared/event.service";
 export class SearchBarComponent {
     @Output() locations: EventEmitter<any> = new EventEmitter<any>()
     search: string = ''
-    constructor(private eventService: EventService) {
+    constructor(private eventService: EventService, private activatedRouter:ActivatedRoute, router:Router) {
 
     }
 
