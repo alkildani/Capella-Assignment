@@ -11,6 +11,7 @@ import { HotelDetailsComponent } from './events/event-details/hotel-details.comp
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './routes';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
 
   ],
   providers: [
