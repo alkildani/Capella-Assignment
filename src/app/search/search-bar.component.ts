@@ -16,7 +16,7 @@ export class SearchBarComponent {
 
     searchEvent() {
         console.log(this.search)
-        var l = this.eventService.getEvent(this.search)
+        var l = this.eventService.getHotels(this.search).subscribe()
         console.log(l)
         this.locations.emit(l)
 
